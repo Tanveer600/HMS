@@ -27,6 +27,8 @@
             "styles": [
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/font-awesome.min.css",
+              "src/assets/css/select2.min.css",
+              "src/assets/css/bootstrap-datetimepicker.min.css",
               "src/assets/css/style.css"
             ],
             "scripts": [
@@ -36,7 +38,10 @@
               "src/assets/js/jquery.slimscroll.js",
               "src/assets/js/Chart.bundle.js",
               "src/assets/js/chart.js",
-              "src/assets/js/app.js"
+              "src/assets/js/app.js",
+              "src/assets/js/select2.min.js",
+              "src/assets/js/moment.min.js",
+              "src/assets/js/bootstrap-datetimepicker.min.js"
             ]
           },
           "configurations": {

@@ -1028,8 +1028,19 @@ textarea.form-control {
 /*-----------------
 	7. Content
 -----------------------*/
-
 .page-wrapper {
+  margin-left: 130px !important; /* sidebar ko space mil jaye */
+  padding-top: 50px !important;
+  padding-right: 30px !important;
+  padding-left: 30px !important;
+}
+
+.page-wrapper > .content {
+  padding: 30px !important;
+  max-width: 1200px !important; /* content ko center me rakhega */
+  margin: 0 auto !important;
+}
+/* .page-wrapper {
 	left: 0;
 	margin-left: 230px;
 	padding-top: 50px;
@@ -1040,7 +1051,7 @@ textarea.form-control {
 }
 .page-wrapper > .content {
 	padding: 30px;
-}
+} */
 
 /*-----------------
 	8. Login
