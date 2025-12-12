@@ -1029,7 +1029,7 @@ textarea.form-control {
 	7. Content
 -----------------------*/
 .page-wrapper {
-  margin-left: 130px !important; /* sidebar ko space mil jaye */
+  margin-left: 100px !important; /* sidebar ko space mil jaye */
   padding-top: 50px !important;
   padding-right: 30px !important;
   padding-left: 30px !important;
