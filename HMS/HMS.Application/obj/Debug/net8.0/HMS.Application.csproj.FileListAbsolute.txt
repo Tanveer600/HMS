@@ -1,0 +1,11 @@
+E:\Reactjs\HMS\HMS.Application\bin\Debug\net8.0\HMS.Application.deps.json
+E:\Reactjs\HMS\HMS.Application\bin\Debug\net8.0\HMS.Application.dll
+E:\Reactjs\HMS\HMS.Application\bin\Debug\net8.0\HMS.Application.pdb
+E:\Reactjs\HMS\HMS.Application\obj\Debug\net8.0\HMS.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Reactjs\HMS\HMS.Application\obj\Debug\net8.0\HMS.Application.AssemblyInfoInputs.cache
+E:\Reactjs\HMS\HMS.Application\obj\Debug\net8.0\HMS.Application.AssemblyInfo.cs
+E:\Reactjs\HMS\HMS.Application\obj\Debug\net8.0\HMS.Application.csproj.CoreCompileInputs.cache
+E:\Reactjs\HMS\HMS.Application\obj\Debug\net8.0\HMS.Application.dll
+E:\Reactjs\HMS\HMS.Application\obj\Debug\net8.0\refint\HMS.Application.dll
+E:\Reactjs\HMS\HMS.Application\obj\Debug\net8.0\HMS.Application.pdb
+E:\Reactjs\HMS\HMS.Application\obj\Debug\net8.0\ref\HMS.Application.dll

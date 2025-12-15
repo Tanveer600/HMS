@@ -1,0 +1,11 @@
+E:\Reactjs\HMS\HMS.Domain\bin\Debug\net8.0\HMS.Domain.deps.json
+E:\Reactjs\HMS\HMS.Domain\bin\Debug\net8.0\HMS.Domain.dll
+E:\Reactjs\HMS\HMS.Domain\bin\Debug\net8.0\HMS.Domain.pdb
+E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.AssemblyInfoInputs.cache
+E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.AssemblyInfo.cs
+E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.csproj.CoreCompileInputs.cache
+E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.dll
+E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\refint\HMS.Domain.dll
+E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.pdb
+E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\ref\HMS.Domain.dll

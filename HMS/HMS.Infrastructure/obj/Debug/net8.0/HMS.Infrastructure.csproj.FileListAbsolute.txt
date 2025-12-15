@@ -1,0 +1,17 @@
+E:\Reactjs\HMS\HMS.Infrastructure\bin\Debug\net8.0\HMS.Infrastructure.deps.json
+E:\Reactjs\HMS\HMS.Infrastructure\bin\Debug\net8.0\HMS.Infrastructure.runtimeconfig.json
+E:\Reactjs\HMS\HMS.Infrastructure\bin\Debug\net8.0\HMS.Infrastructure.dll
+E:\Reactjs\HMS\HMS.Infrastructure\bin\Debug\net8.0\HMS.Infrastructure.pdb
+E:\Reactjs\HMS\HMS.Infrastructure\bin\Debug\net8.0\HMS.Domain.dll
+E:\Reactjs\HMS\HMS.Infrastructure\bin\Debug\net8.0\HMS.Domain.pdb
+E:\Reactjs\HMS\HMS.Infrastructure\obj\Debug\net8.0\HMS.Infrastructure.csproj.AssemblyReference.cache
+E:\Reactjs\HMS\HMS.Infrastructure\obj\Debug\net8.0\HMS.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Reactjs\HMS\HMS.Infrastructure\obj\Debug\net8.0\HMS.Infrastructure.AssemblyInfoInputs.cache
+E:\Reactjs\HMS\HMS.Infrastructure\obj\Debug\net8.0\HMS.Infrastructure.AssemblyInfo.cs
+E:\Reactjs\HMS\HMS.Infrastructure\obj\Debug\net8.0\HMS.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Reactjs\HMS\HMS.Infrastructure\obj\Debug\net8.0\HMS.Infrastructure.csproj.CopyComplete
+E:\Reactjs\HMS\HMS.Infrastructure\obj\Debug\net8.0\HMS.Infrastructure.dll
+E:\Reactjs\HMS\HMS.Infrastructure\obj\Debug\net8.0\refint\HMS.Infrastructure.dll
+E:\Reactjs\HMS\HMS.Infrastructure\obj\Debug\net8.0\HMS.Infrastructure.pdb
+E:\Reactjs\HMS\HMS.Infrastructure\obj\Debug\net8.0\HMS.Infrastructure.genruntimeconfig.cache
+E:\Reactjs\HMS\HMS.Infrastructure\obj\Debug\net8.0\ref\HMS.Infrastructure.dll
