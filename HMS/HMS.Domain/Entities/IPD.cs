@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ namespace HMS.Domain.Entities
 {
     public class IPD
     {
-        public int IPDInPatientId { get; set; }
+        public int ID { get; set; }
 
         public DateTime AdmissionDate { get; set; }
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8KqQrom7QMPz1Tmh7sre6z54OtcOk59v+IHpS/89VaudsSaa5WsPxGB8Svkne//TwK4rr3kW9+sLwr+mwusv9w==",
+  "dgSpecHash": "cFttuwgvZMnYnYWwUlDOCYDNJaGeb8dMD3wwyymK5IT1UhVryGCGZ556OJ0qcBPaodmAAISAtl2aN2HDP9PSmw==",
   "success": true,
-  "projectFilePath": "E:\\Reactjs\\HMS\\HMS.Infrastructure\\HMS.Infrastructure.csproj",
+  "projectFilePath": "E:\\HMS\\HMS\\HMS.Infrastructure\\HMS.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HT\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\HT\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Reactjs\\HMS\\HMS.Domain\\HMS.Domain.csproj": {}
+    "E:\\HMS\\HMS\\HMS.Domain\\HMS.Domain.csproj": {}
   },
   "projects": {
-    "E:\\Reactjs\\HMS\\HMS.Domain\\HMS.Domain.csproj": {
+    "E:\\HMS\\HMS\\HMS.Domain\\HMS.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Reactjs\\HMS\\HMS.Domain\\HMS.Domain.csproj",
+        "projectUniqueName": "E:\\HMS\\HMS\\HMS.Domain\\HMS.Domain.csproj",
         "projectName": "HMS.Domain",
-        "projectPath": "E:\\Reactjs\\HMS\\HMS.Domain\\HMS.Domain.csproj",
+        "projectPath": "E:\\HMS\\HMS\\HMS.Domain\\HMS.Domain.csproj",
         "packagesPath": "C:\\Users\\HT\\.nuget\\packages\\",
-        "outputPath": "E:\\Reactjs\\HMS\\HMS.Domain\\obj\\",
+        "outputPath": "E:\\HMS\\HMS\\HMS.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
