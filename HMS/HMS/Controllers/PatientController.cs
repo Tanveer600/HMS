@@ -23,8 +23,7 @@ namespace HMS.Controllers
       return _service.Get(model);
     }
     [HttpPost("delete")]
-    public ResponseDataModel Delete
-      (Patient model)
+    public ResponseDataModel Delete (Patient model)
     {
       return _service.Remove(model);
     }

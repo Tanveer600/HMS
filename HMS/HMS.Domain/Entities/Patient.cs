@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace HMS.Domain.Entities
     {
         public int PatientId { get; set; }
 
-        [Required]
+        //[Required]
         public string ? Name { get; set; }
 
         public string? GuardianName { get; set; }
@@ -34,10 +34,10 @@ namespace HMS.Domain.Entities
         // Patient photo path
         public string? PatientPhoto { get; set; }
 
-        [Phone]
+        //[Phone]
         public string? Phone { get; set; }
 
-        [EmailAddress]
+       // [EmailAddress]
         public string ? Email { get; set; }
 
         public string? Address { get; set; }
@@ -53,8 +53,8 @@ namespace HMS.Domain.Entities
 
         public DateTime? TPAValidity { get; set; }
 
-        public string NationalIdentificationNumber { get; set; }
+        public string ? NationalIdentificationNumber { get; set; }
 
-        public string AlternateNumber { get; set; }
+        public string? AlternateNumber { get; set; }
     }
 }
