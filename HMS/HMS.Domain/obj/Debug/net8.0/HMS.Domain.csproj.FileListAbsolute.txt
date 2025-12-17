@@ -9,3 +9,17 @@ E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.dll
 E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\refint\HMS.Domain.dll
 E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.pdb
 E:\Reactjs\HMS\HMS.Domain\obj\Debug\net8.0\ref\HMS.Domain.dll
+E:\HMS\HMS\HMS.Domain\bin\Debug\net8.0\HMS.Domain.deps.json
+E:\HMS\HMS\HMS.Domain\bin\Debug\net8.0\HMS.Domain.runtimeconfig.json
+E:\HMS\HMS\HMS.Domain\bin\Debug\net8.0\HMS.Domain.dll
+E:\HMS\HMS\HMS.Domain\bin\Debug\net8.0\HMS.Domain.pdb
+E:\HMS\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\HMS\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.AssemblyInfoInputs.cache
+E:\HMS\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.AssemblyInfo.cs
+E:\HMS\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.csproj.CoreCompileInputs.cache
+E:\HMS\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.sourcelink.json
+E:\HMS\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.dll
+E:\HMS\HMS\HMS.Domain\obj\Debug\net8.0\refint\HMS.Domain.dll
+E:\HMS\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.pdb
+E:\HMS\HMS\HMS.Domain\obj\Debug\net8.0\HMS.Domain.genruntimeconfig.cache
+E:\HMS\HMS\HMS.Domain\obj\Debug\net8.0\ref\HMS.Domain.dll

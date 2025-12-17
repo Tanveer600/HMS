@@ -1,5 +1,6 @@
 using HMS.Domain.DataModel;
 using HMS.Domain.Entities;
+using HMS.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HMS.Infrastructure.Repositories
 {
-  public class DoctorRepopsitory
+  public class DoctorRepopsitory:IDoctorRepository
   {
     private readonly DbDataContext _dbDataContext;
     public DoctorRepopsitory(DbDataContext dbDataContext)
@@ -67,7 +68,7 @@ namespace HMS.Infrastructure.Repositories
       return response;
     }
 
-    public ResponseDataModel Read(Patient patient)
+    public ResponseDataModel Read(Doctor patient)
     {
       ResponseDataModel response = new ResponseDataModel();
       try

@@ -2,8 +2,6 @@ using HMS.Application.Interfaces;
 using HMS.Domain.DataModel;
 using HMS.Domain.Entities;
 using HMS.Domain.Interfaces;
-using HMS.Infrastructure;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;

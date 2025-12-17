@@ -95,7 +95,7 @@ namespace HMS.Infrastructure.Repositories
       ResponseDataModel response = new ResponseDataModel();
       try
       {
-        var list = _dbDataContext.appointments.FirstOrDefault(x => x.PatientId == patient.PatientId);
+        var list = _dbDataContext.appointments.FirstOrDefault(x => x.PatientId == appointment.PatientId);
         if (list != null)
         {
           list.Remarks = appointment.Remarks;

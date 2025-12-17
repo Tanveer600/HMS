@@ -30,9 +30,6 @@
             "projectReferences": {
               "E:\\HMS\\HMS\\HMS.Domain\\HMS.Domain.csproj": {
                 "projectPath": "E:\\HMS\\HMS\\HMS.Domain\\HMS.Domain.csproj"
-              },
-              "E:\\HMS\\HMS\\HMS.Infrastructure\\HMS.Infrastructure.csproj": {
-                "projectPath": "E:\\HMS\\HMS\\HMS.Infrastructure\\HMS.Infrastructure.csproj"
               }
             }
           }

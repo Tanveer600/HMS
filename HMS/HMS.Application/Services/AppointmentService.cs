@@ -1,3 +1,4 @@
+using HMS.Application.Interfaces;
 using HMS.Domain.DataModel;
 using HMS.Domain.Entities;
 using HMS.Domain.Interfaces;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HMS.Application.Services
 {
-  public class AppointmentService
+  public class AppointmentService:IAppointmentService
   {
     private readonly IAppointmentRepository _repository;
     public AppointmentService(IAppointmentRepository repository)
