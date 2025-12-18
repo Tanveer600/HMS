@@ -1,8 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { PatientState } from './patient.state';
 
-export const selectPatientState =
-  createFeatureSelector<PatientState>('patient');
+export const selectPatientState = createFeatureSelector<PatientState>('patient');
 
 export const selectPatients = createSelector(
   selectPatientState,
