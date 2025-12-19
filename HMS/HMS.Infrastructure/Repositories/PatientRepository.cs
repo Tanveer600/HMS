@@ -26,6 +26,7 @@ namespace HMS.Infrastructure.Repositories
         _dbDataContext.SaveChanges();
         response.IsSuccess = true;
         response.Message = "data created successfully";
+        response.Data=new List<Patient> { patient };  
       }
       catch (Exception ex)
       {

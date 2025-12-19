@@ -30,13 +30,6 @@ E:\Reactjs\HMS\HMS\obj\Debug\net8.0\refint\HMS.dll
 E:\Reactjs\HMS\HMS\obj\Debug\net8.0\HMS.pdb
 E:\Reactjs\HMS\HMS\obj\Debug\net8.0\HMS.genruntimeconfig.cache
 E:\Reactjs\HMS\HMS\obj\Debug\net8.0\ref\HMS.dll
-E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.csproj.AssemblyReference.cache
-E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.GeneratedMSBuildEditorConfig.editorconfig
-E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.AssemblyInfoInputs.cache
-E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.AssemblyInfo.cs
-E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.csproj.CoreCompileInputs.cache
-E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.MvcApplicationPartsAssemblyInfo.cache
-E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.sourcelink.json
 E:\HMS\HMS\HMS\bin\Debug\net8.0\appsettings.Development.json
 E:\HMS\HMS\HMS\bin\Debug\net8.0\appsettings.json
 E:\HMS\HMS\HMS\bin\Debug\net8.0\HMS.exe
@@ -158,7 +151,14 @@ E:\HMS\HMS\HMS\bin\Debug\net8.0\HMS.Infrastructure.dll
 E:\HMS\HMS\HMS\bin\Debug\net8.0\HMS.Application.pdb
 E:\HMS\HMS\HMS\bin\Debug\net8.0\HMS.Infrastructure.pdb
 E:\HMS\HMS\HMS\bin\Debug\net8.0\HMS.Domain.pdb
+E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.csproj.AssemblyReference.cache
+E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.GeneratedMSBuildEditorConfig.editorconfig
+E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.AssemblyInfoInputs.cache
+E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.AssemblyInfo.cs
+E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.csproj.CoreCompileInputs.cache
 E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.MvcApplicationPartsAssemblyInfo.cs
+E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.MvcApplicationPartsAssemblyInfo.cache
+E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.sourcelink.json
 E:\HMS\HMS\HMS\obj\Debug\net8.0\staticwebassets.build.json
 E:\HMS\HMS\HMS\obj\Debug\net8.0\staticwebassets.development.json
 E:\HMS\HMS\HMS\obj\Debug\net8.0\staticwebassets\msbuild.HMS.Microsoft.AspNetCore.StaticWebAssets.props
@@ -173,3 +173,4 @@ E:\HMS\HMS\HMS\obj\Debug\net8.0\refint\HMS.dll
 E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.pdb
 E:\HMS\HMS\HMS\obj\Debug\net8.0\HMS.genruntimeconfig.cache
 E:\HMS\HMS\HMS\obj\Debug\net8.0\ref\HMS.dll
+E:\HMS\HMS\HMS\bin\Debug\net8.0\HMS.staticwebassets.runtime.json

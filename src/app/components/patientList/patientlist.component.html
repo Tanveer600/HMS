@@ -1,110 +1,105 @@
 <div class="row">
-				<div class="col-md-12">
-					<div class="table-responsive">
-						<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Guardian Name</th>
-      <th>Gender</th>
-      <th>Date Of Birth</th>
-      <th>Age</th>
-      <th>Blood Group</th>
-      <th>Marital Status</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Address</th>
-      <th>Remarks</th>
-      <th>Allergies</th>
-      <th>TPA</th>
-      <th>TPA Id</th>
-      <th>TPA Validity</th>
-      <th>National ID</th>
-      <th>Alternate No</th>
-      <th class="text-right">Action</th>
-    </tr>
-  </thead>
+  <div class="col-md-12">
+    <div class="table-responsive">
 
-  <tbody>
-  <tr *ngFor="let p of (patients$ | async)">
+      <!-- Table -->
+      <table class="table table-striped" *ngIf="patients$ | async as patients">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Guardian Name</th>
+            <th>Gender</th>
+            <th>Date Of Birth</th>
+            <th>Age</th>
+            <th>Blood Group</th>
+            <th>Marital Status</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Remarks</th>
+            <th>Allergies</th>
+            <th>TPA</th>
+            <th>TPA Id</th>
+            <th>TPA Validity</th>
+            <th>National ID</th>
+            <th>Alternate No</th>
+            <th class="text-right">Action</th>
+          </tr>
+        </thead>
 
-      
-      <td>
-        <img
-          width="28"
-          height="28"
-          [src]="p.patientPhoto || 'assets/img/user.jpg'"
-          class="rounded-circle m-r-5"
-          alt=""
-        />
-        {{ p.name }}
-      </td>
+        <tbody>
+          <tr *ngFor="let p of patients">
+            <td>
+              <img
+                width="40"
+                height="40"
+                [src]="p.patientPhoto || 'assets/img/user.jpg'"
+                class="rounded-circle m-r-5"
+                alt="Patient"
+              />
+              {{ p.name }}
+            </td>
+            <td>{{ p.guardianName }}</td>
+            <td>{{ p.gender }}</td>
+            <td>{{ formatDate(p.dateOfBirth) }}</td>
+            <td>{{ p.age }}</td>
+            <td>{{ p.bloodGroup }}</td>
+            <td>{{ p.maritalStatus }}</td>
+            <td>{{ p.phone }}</td>
+            <td>{{ p.email }}</td>
+            <td>{{ p.address }}</td>
+            <td>{{ p.remarks }}</td>
+            <td>{{ p.anyKnownAllergies }}</td>
+            <td>{{ p.tpa }}</td>
+            <td>{{ p.tpaId }}</td>
+            <td>{{ formatDate(p.tpaValidity) }}</td>
+            <td>{{ p.nationalIdentificationNumber }}</td>
+            <td>{{ p.alternateNumber }}</td>
+            <td class="text-right">
+              <div class="dropdown dropdown-action">
+                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-ellipsis-v"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" [routerLink]="['/patients/edit', p.patientId]">
+                    <i class="fa fa-pencil m-r-5"></i> Edit
+                  </a>
+                  <a class="dropdown-item" href="#" (click)="deletePatient(p.patientId)">
+                    <i class="fa fa-trash-o m-r-5"></i> Delete
+                  </a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-      <td>{{ p.guardianName }}</td>
-      <td>{{ p.gender }}</td>
-      <td>{{ p.dateOfBirth }}</td>
-      <td>{{ p.age }}</td>
-      <td>{{ p.bloodGroup }}</td>
-      <td>{{ p.maritalStatus }}</td>
-      <td>{{ p.phone }}</td>
-      <td>{{ p.email }}</td>
-      <td>{{ p.address }}</td>
-      <td>{{ p.remarks }}</td>
-      <td>{{ p.anyKnownAllergies }}</td>
-      <td>{{ p.tpa }}</td>
-      <td>{{ p.tpaId }}</td>
-      <td>{{ p.tpaValidity }}</td>
-      <td>{{ p.nationalIdentificationNumber }}</td>
-      <td>{{ p.alternateNumber }}</td>
+      <!-- Optional: Loading indicator -->
+      <div *ngIf="loading$ | async" class="text-center my-2">
+        Loading patients...
+      </div>
 
-      <td class="text-right">
-        <div class="dropdown dropdown-action">
-          <a
-            href="#"
-            class="action-icon dropdown-toggle"
-            data-toggle="dropdown"
-          >
-            <i class="fa fa-ellipsis-v"></i>
-          </a>
+      <!-- Optional: Error message -->
+      <div *ngIf="error$ | async as error" class="alert alert-danger mt-2">
+        {{ error.message || 'Failed to load patients' }}
+      </div>
 
-          <div class="dropdown-menu dropdown-menu-right">
-            <a
-              class="dropdown-item"
-              [routerLink]="['/patients/edit', p.patientId]"
-            >
-              <i class="fa fa-pencil m-r-5"></i> Edit
-            </a>
+    </div>
+  </div>
 
-            <a
-              class="dropdown-item"
-              href="#"
-              (click)="deletePatient(p.patientId !)"
-            >
-              <i class="fa fa-trash-o m-r-5"></i> Delete
-            </a>
+  <!-- Delete modal -->
+  <div id="delete_patient" class="modal fade delete-modal" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="assets/img/sent.png" alt="" width="50" height="46">
+          <h3>Are you sure want to delete this Patient?</h3>
+          <div class="m-t-20">
+            <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+            <button type="submit" class="btn btn-danger">Delete</button>
           </div>
         </div>
-      </td>
-
-    </tr>
-  </tbody>
-</table>
-
-					</div>
-				</div>
- 
-  <div id="delete_patient" class="modal fade delete-modal" role="dialog">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-body text-center">
-				<img src="assets/img/sent.png" alt="" width="50" height="46">
-				<h3>Are you sure want to delete this Patient?</h3>
-				<div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
-					<button type="submit" class="btn btn-danger">Delete</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+      </div>
+    </div>
+  </div>
 </div>
-            </div>

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HMS.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -115,7 +115,7 @@ namespace HMS.Infrastructure.Migrations
                 {
                     PatientId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     GuardianName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -131,8 +131,8 @@ namespace HMS.Infrastructure.Migrations
                     TPA = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TPAId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TPAValidity = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    NationalIdentificationNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AlternateNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    NationalIdentificationNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AlternateNumber = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

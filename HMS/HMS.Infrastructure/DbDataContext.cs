@@ -1,4 +1,4 @@
-﻿using HMS.Domain.Entities;
+using HMS.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

@@ -11,17 +11,25 @@ export class PatientEffects {
   private actions$ = inject(Actions);          // ✅ FIX
   private patientService = inject(PatientService);
 
-  loadPatients$ = createEffect(() =>
+ loadPatients$ = createEffect(() =>
+  this.actions$.pipe(
+    ofType(PatientActions.loadPatients),
+    mergeMap(() =>
+      this.patientService.getPatients().pipe(
+        map(res => PatientActions.loadPatientsSuccess({ patients: res.data || [] })),
+        catchError(error => of(PatientActions.loadPatientsFailure({ error })))
+      )
+    )
+  )
+);
+ // ✅ Add patient effect
+  addPatient$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(PatientActions.loadPatients),
-      mergeMap(() =>
-        this.patientService.getPatients().pipe(
-          map(patients =>
-            PatientActions.loadPatientsSuccess({ patients })
-          ),
-          catchError(error =>
-            of(PatientActions.loadPatientsFailure({ error }))
-          )
+      ofType(PatientActions.addPatient),
+      mergeMap(action =>
+        this.patientService.savePatient(action.patient).pipe(
+          map(() => PatientActions.loadPatients()), // reload list
+          catchError(error => of(PatientActions.loadPatientsFailure({ error })))
         )
       )
     )

@@ -1,3 +1,4 @@
+using HMS.Application.Interfaces;
 using HMS.Application.Services;
 using HMS.Domain.DataModel;
 using HMS.Domain.Entities;
@@ -10,15 +11,28 @@ namespace HMS.Controllers
   [ApiController]
   public class PatientController : ControllerBase
   {
-    private readonly PatientService _service;
-
-    [HttpPost("save")]
-    public ResponseDataModel  Save(Patient model)
+    private readonly IPatientService _service;
+    public PatientController(IPatientService service)
     {
+        _service= service;  
+    }
+    [HttpPost("save")]
+    public async Task<ResponseDataModel> Save([FromForm] Patient model, IFormFile photo)
+     {
+      if (photo != null)
+      {
+        var filePath = Path.Combine("wwwroot/uploads", photo.FileName);
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+          await photo.CopyToAsync(stream);
+        }
+        model.PatientPhoto = "uploads/" + photo.FileName;
+      }
       return _service.Save(model);
     }
-    [HttpPost("read")]
-    public ResponseDataModel read(Patient model)
+
+    [HttpPost("get")]
+    public ResponseDataModel Get(Patient model)
     {
       return _service.Get(model);
     }
