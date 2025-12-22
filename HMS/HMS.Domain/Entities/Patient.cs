@@ -46,13 +46,7 @@ namespace HMS.Domain.Entities
 
         public string? AnyKnownAllergies { get; set; }
 
-        // Dropdown (Yes / No or TPA Name)
-        public string? TPA { get; set; }
-
-        public string? TPAId { get; set; }
-
-        public DateTime? TPAValidity { get; set; }
-
+       
         public string ? NationalIdentificationNumber { get; set; }
 
         public string? AlternateNumber { get; set; }

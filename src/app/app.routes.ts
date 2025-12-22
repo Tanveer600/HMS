@@ -11,13 +11,31 @@ export const routes: Routes = [
 
       {
         path: 'patients',
-        loadComponent: () => import('./components/patient/patient.component').then(m => m.PatientComponent),
+        loadComponent: () =>
+          import('./components/patient/patient.component')
+            .then(m => m.PatientComponent),
         children: [
-          { path: '', loadComponent: () => import('./components/patientList/patientlist.component').then(m => m.PatientlistComponent) },
-          { path: 'add', loadComponent: () => import('./components/add-patient/add-patient.component').then(m => m.AddPatientComponent) },
-          { path: 'edit', loadComponent: () => import('./components/edit-patient/edit-patient.component').then(m => m.EditPatientComponent) }
+          {
+            path: '',
+            loadComponent: () =>
+              import('./components/patientList/patientlist.component')
+                .then(m => m.PatientlistComponent)
+          },
+          {
+            path: 'add',
+            loadComponent: () =>
+              import('./components/add-patient/add-patient.component')
+                .then(m => m.AddPatientComponent)
+          },
+          {
+            path: 'edit/:id', // ✅ FIXED
+            loadComponent: () =>
+              import('./components/edit-patient/edit-patient.component')
+                .then(m => m.EditPatientComponent)
+          }
         ]
       },
+
       {
 
         path: 'doctors',

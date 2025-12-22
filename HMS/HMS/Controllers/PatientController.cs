@@ -21,13 +21,24 @@ namespace HMS.Controllers
      {
       if (photo != null)
       {
-        var filePath = Path.Combine("wwwroot/uploads", photo.FileName);
-        using (var stream = new FileStream(filePath, FileMode.Create))
-        {
-          await photo.CopyToAsync(stream);
-        }
-        model.PatientPhoto = "uploads/" + photo.FileName;
+        var fileName = Guid.NewGuid() + Path.GetExtension(photo.FileName);
+        var filePath = Path.Combine("wwwroot/uploads", fileName);
+
+        using var stream = new FileStream(filePath, FileMode.Create);
+        await photo.CopyToAsync(stream);
+
+        model.PatientPhoto = "uploads/" + fileName;
       }
+
+      //if (photo != null)
+      //{
+      //  var filePath = Path.Combine("wwwroot/uploads", photo.FileName);
+      //  using (var stream = new FileStream(filePath, FileMode.Create))
+      //  {
+      //    await photo.CopyToAsync(stream);
+      //  }
+      //  model.PatientPhoto = "uploads/" + photo.FileName;
+      //}
       return _service.Save(model);
     }
 

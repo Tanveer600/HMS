@@ -7,7 +7,7 @@
         <thead>
           <tr>
             <th>Name</th>
-            <th>Guardian Name</th>
+            <th>Guardian</th>
             <th>Gender</th>
             <th>Date Of Birth</th>
             <th>Age</th>
@@ -18,10 +18,7 @@
             <th>Address</th>
             <th>Remarks</th>
             <th>Allergies</th>
-            <th>TPA</th>
-            <th>TPA Id</th>
-            <th>TPA Validity</th>
-            <th>National ID</th>
+            <th>ID Card</th>
             <th>Alternate No</th>
             <th class="text-right">Action</th>
           </tr>
@@ -33,7 +30,7 @@
               <img
                 width="40"
                 height="40"
-                [src]="p.patientPhoto || 'assets/img/user.jpg'"
+              [src]="'https://localhost:7018/' + p.patientPhoto"
                 class="rounded-circle m-r-5"
                 alt="Patient"
               />
@@ -50,9 +47,6 @@
             <td>{{ p.address }}</td>
             <td>{{ p.remarks }}</td>
             <td>{{ p.anyKnownAllergies }}</td>
-            <td>{{ p.tpa }}</td>
-            <td>{{ p.tpaId }}</td>
-            <td>{{ formatDate(p.tpaValidity) }}</td>
             <td>{{ p.nationalIdentificationNumber }}</td>
             <td>{{ p.alternateNumber }}</td>
             <td class="text-right">

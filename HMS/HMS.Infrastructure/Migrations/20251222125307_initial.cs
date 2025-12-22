@@ -26,7 +26,6 @@ namespace HMS.Infrastructure.Migrations
                     Reason = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TokenNumber = table.Column<int>(type: "int", nullable: false),
                     ConsultationFee = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    IsFollowUp = table.Column<bool>(type: "bit", nullable: false),
                     CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Remarks = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -45,12 +44,13 @@ namespace HMS.Infrastructure.Migrations
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Gender = table.Column<bool>(type: "bit", nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Country = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     City = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Province = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PostalCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ShortBioGraphy = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ShortBioGraphy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DoctorPhoto = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -128,9 +128,6 @@ namespace HMS.Infrastructure.Migrations
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Remarks = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AnyKnownAllergies = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TPA = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TPAId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TPAValidity = table.Column<DateTime>(type: "datetime2", nullable: true),
                     NationalIdentificationNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AlternateNumber = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },

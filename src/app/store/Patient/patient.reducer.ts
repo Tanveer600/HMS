@@ -17,7 +17,7 @@ export const patientReducer = createReducer(
   })),
 
   // ✅ NOW THIS WILL WORK
-  on(PatientActions.addPatient, (state, { patient }) => ({
+  on(PatientActions.savePatient, (state, { patient }) => ({
     ...state,
     patients: [...state.patients, patient]
   }))

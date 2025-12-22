@@ -107,6 +107,7 @@ namespace HMS.Infrastructure.Repositories
           list.Gender = patient.Gender;
           list.Country = patient.Country;
           list.Email = patient.Email;
+          list.DoctorPhoto = patient.DoctorPhoto;
           
           _dbDataContext.Entry(list).State = EntityState.Modified;
           int n = _dbDataContext.SaveChanges();

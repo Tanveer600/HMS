@@ -11,20 +11,21 @@ export class PatientService {
 
   // Add or update patient with optional photo
   savePatient(patient: Patient, file?: File): Observable<any> {
-    const formData = new FormData();
+  const formData = new FormData();
 
-    for (const key in patient) {
-      if (patient[key as keyof Patient] != null) {
-        formData.append(key, patient[key as keyof Patient] as string);
-      }
+  Object.entries(patient).forEach(([key, value]) => {
+    if (value !== null && value !== undefined && value !== '') {
+      formData.append(key, value.toString());
     }
+  });
 
-    if (file) {
-      formData.append('photo', file, file.name);
-    }
-
-    return this.http.post(`${this.api}/save`, formData);
+  if (file) {
+    // 🔥 MUST MATCH backend param name
+    formData.append('photo', file);
   }
+
+  return this.http.post(`${this.api}/save`, formData);
+}
 
   // Get patients
   getPatients(filter?: Patient): Observable<any> {

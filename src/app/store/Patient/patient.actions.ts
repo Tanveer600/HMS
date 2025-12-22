@@ -13,7 +13,13 @@ export const loadPatientsFailure = createAction(
 );
 
 // ✅ ADD THIS
-export const addPatient = createAction(
-  '[Patient] Add',
-  props<{ patient: any }>()
+// 🔥 SAVE (Create + Update)
+export const savePatient = createAction(
+  '[Patient] Save',
+  props<{ patient: any; file?: File }>()
+);
+// ✅ DELETE
+export const deletePatient = createAction(
+  '[Patient] Delete',
+  props<{ patientId: number }>()
 );

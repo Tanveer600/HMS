@@ -100,34 +100,14 @@
         </div>
       </div>
 
-      <!-- Row 5 -->
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="form-group">
-            <label>TPA</label>
-            <input type="text" class="form-control" [(ngModel)]="patient.tpa" name="tpa">
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="form-group">
-            <label>TPA ID</label>
-            <input type="text" class="form-control" [(ngModel)]="patient.tpaId" name="tpaId">
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="form-group">
-            <label>TPA Validity</label>
-            <input type="date" class="form-control" [(ngModel)]="patient.tpaValidity" name="tpaValidity">
-          </div>
-        </div>
-      </div>
 
       <!-- Row 6 -->
       <div class="row">
         <div class="col-sm-4">
           <div class="form-group">
             <label>National ID</label>
-            <input type="text" class="form-control" [(ngModel)]="patient.nationalIdentificationNumber" name="nationalIdentificationNumber">
+            <input type="text" class="form-control" [(ngModel)]="patient.nationalIdentificationNumber"
+              name="nationalIdentificationNumber">
           </div>
         </div>
         <div class="col-sm-4">
@@ -137,11 +117,11 @@
           </div>
         </div>
         <div class="col-sm-4">
-  <div class="form-group">
-    <label>Photo</label>
-    <input type="file" class="form-control" (change)="onFileChange($event)">
-  </div>
-</div>
+          <div class="form-group">
+            <label>Photo</label>
+            <input type="file" class="form-control" (change)="onFileChange($event)">
+          </div>
+        </div>
 
       </div>
 

@@ -22,14 +22,30 @@ export class PatientEffects {
     )
   )
 );
- // ✅ Add patient effect
-  addPatient$ = createEffect(() =>
+ // 🔥 SAVE (Create + Update)
+  savePatient$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(PatientActions.addPatient),
+      ofType(PatientActions.savePatient),
       mergeMap(action =>
-        this.patientService.savePatient(action.patient).pipe(
-          map(() => PatientActions.loadPatients()), // reload list
-          catchError(error => of(PatientActions.loadPatientsFailure({ error })))
+        this.patientService.savePatient(action.patient, action.file).pipe(
+          map(() => PatientActions.loadPatients()), // refresh list
+          catchError(error =>
+            of(PatientActions.loadPatientsFailure({ error }))
+          )
+        )
+      )
+    )
+  );
+   // ✅ DELETE EFFECT
+  deletePatient$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(PatientActions.deletePatient),
+      mergeMap(action =>
+        this.patientService.deletePatient({ patientId: action.patientId } as any).pipe(
+          map(() => PatientActions.loadPatients()), // 🔥 refresh list
+          catchError(error =>
+            of(PatientActions.loadPatientsFailure({ error }))
+          )
         )
       )
     )

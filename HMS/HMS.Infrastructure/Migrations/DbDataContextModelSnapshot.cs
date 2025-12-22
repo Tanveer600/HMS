@@ -48,9 +48,6 @@ namespace HMS.Infrastructure.Migrations
                     b.Property<int>("DoctorId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsFollowUp")
-                        .HasColumnType("bit");
-
                     b.Property<int>("PatientId")
                         .HasColumnType("int");
 
@@ -88,14 +85,17 @@ namespace HMS.Infrastructure.Migrations
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("DoctorPhoto")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Gender")
-                        .HasColumnType("bit");
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
@@ -276,15 +276,6 @@ namespace HMS.Infrastructure.Migrations
 
                     b.Property<string>("Remarks")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TPA")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TPAId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("TPAValidity")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("PatientId");
 

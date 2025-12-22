@@ -25,9 +25,6 @@ interface Patient {
   address: string;
   remarks: string;
   anyKnownAllergies: string;
-  tpa: string;
-  tpaId: string;
-  tpaValidity: string;
   nationalIdentificationNumber: string;
   alternateNumber: string;
   patientPhoto?: string;
@@ -58,15 +55,17 @@ export class PatientlistComponent implements OnInit {
     this.error$ = this.store.select(selectError);
   }
 
-  deletePatient(id?: number): void {
-    if (!id) return;
+deletePatient(id?: number): void {
+  if (!id) return;
 
-    if (!confirm('Are you sure you want to delete this patient?')) return;
+  if (!confirm('Are you sure you want to delete this patient?')) return;
 
-    // Simple approach: delete via API then reload
-    // (NgRx delete effect bhi bana sakte hain next)
-    this.store.dispatch(PatientActions.loadPatients());
-  }
+  // ✅ DELETE action dispatch
+  this.store.dispatch(
+    PatientActions.deletePatient({ patientId: id })
+  );
+}
+
 
   formatDate(dateStr: string): string {
     if (!dateStr) return '-';

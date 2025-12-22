@@ -28,7 +28,6 @@ namespace HMS.Domain.Entities
 
         public decimal ConsultationFee { get; set; }
 
-        public bool IsFollowUp { get; set; }
 
         public DateTime CreatedOn { get; set; }
 

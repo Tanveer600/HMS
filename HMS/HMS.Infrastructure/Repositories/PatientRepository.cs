@@ -106,12 +106,9 @@ namespace HMS.Infrastructure.Repositories
           list.DateOfBirth = patient.DateOfBirth;
           list.Phone = patient.Phone;
           list.Address = patient.Address;
-          list.TPA = patient.TPA;
-          list.Email = patient.Email;
-          list.TPAId = patient.TPAId;
+          list.Email = patient.Email;     
           list.AlternateNumber = patient.AlternateNumber;
           list.AnyKnownAllergies = patient.AnyKnownAllergies;
-          list.TPAValidity = patient.TPAValidity;
           _dbDataContext.Entry(list).State = EntityState.Modified;
           int n = _dbDataContext.SaveChanges();
           if (n > 0)
