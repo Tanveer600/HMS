@@ -39,10 +39,10 @@
         <i class="fa fa-ellipsis-v"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-right">
-        <a class="dropdown-item" [routerLink]="['edit-doctor', doctor.Id]">
+        <a class="dropdown-item" [routerLink]="['/doctors/edit', doctor.doctorId]">
           <i class="fa fa-pencil m-r-5"></i> Edit
         </a>
-        <a class="dropdown-item" href="#" (click)="deleteDoctor(doctor.Id)">
+        <a class="dropdown-item" href="#" (click)="deleteDoctor(doctor.doctorId)">
           <i class="fa fa-trash-o m-r-5"></i> Delete
         </a>
       </div>

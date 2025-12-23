@@ -1,7 +1,7 @@
 // src/app/core/models/patient.model.ts
 export interface Doctor {
 
-  Id?: number;  // optional
+  doctorId?: number;  // optional
   firstName: string;
   lastName?: string;
   gender?: string;

@@ -1,3 +1,4 @@
+using HMS.Application.Interfaces;
 using HMS.Application.Services;
 using HMS.Domain.DataModel;
 using HMS.Domain.Entities;
@@ -10,8 +11,11 @@ namespace HMS.Controllers
   [ApiController]
   public class AppointmentController : ControllerBase
   {
-    private readonly AppointmentService _service;
-
+    private readonly IAppointmentService _service;
+    public AppointmentController(IAppointmentService service)
+    {
+        _service = service;
+    }
     [HttpPost("save")]
     public ResponseDataModel Save(Appointment model)
     {

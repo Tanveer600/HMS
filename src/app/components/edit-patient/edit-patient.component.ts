@@ -16,7 +16,7 @@ import { PatientService } from '../../core/services/patient.service';
 export class EditPatientComponent implements OnInit {
 
   patient: Patient = {
-    patientId: 0,              // 🔥 MUST
+    patientId: 0,             
     name: '',
     guardianName: '',
     gender: '',

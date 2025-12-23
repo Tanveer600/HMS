@@ -43,7 +43,7 @@ export const routes: Routes = [
         children: [
           { path: '', loadComponent: () => import('./components/doctors/doctorslist/doctorslist.component').then(m => m.DoctorslistComponent) },
           { path: 'add', loadComponent: () => import('./components/doctors//add-doctor/add-doctor.component').then(m => m.AddDoctorComponent) },
-          { path: 'edit-doctor', loadComponent: () => import('./components/doctors/edit-doctor/edit-doctor.component').then(m => m.EditDoctorComponent) }
+          { path: 'edit/:id', loadComponent: () => import('./components/doctors/edit-doctor/edit-doctor.component').then(m => m.EditDoctorComponent) }
         ]
       },
 

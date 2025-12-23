@@ -1,11 +1,24 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Doctor } from '../../../core/models/doctor.model';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import * as DoctorActions from '../../../store/Patient/Doctor/doctor.actions';
 import { selectDoctors, selectLoading, selectError } from '../../../store/Patient/Doctor/doctor.selectors';
+  interface Doctor  {
+    doctorId: 0,              
+    firstName: '',
+    lastName: '',
+    gender: '',
+    dateOfBirth: '',
+    city: '',
+    doctorPhoto: '',
+    country: '',
+    email: '',
+    PostalCode: '',
+    shortBioGraphy: '',
+    province: ''
+  };
 @Component({
   selector: 'app-doctorslist',
   standalone: true,
@@ -49,4 +62,5 @@ deleteDoctor(id?: number): void {
       .toString()
       .padStart(2, '0')}-${d.getFullYear()}`;
   }
+  
 }
