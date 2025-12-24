@@ -10,13 +10,15 @@ import { patientReducer } from './store/Patient/patient.reducer';
 import { PatientEffects } from './store/Patient/patient.useeffect';
 import { doctorReducer } from './store/Patient/Doctor/doctor.reducer';
 import { DoctorEffects } from './store/Patient/Doctor/doctor.useeffect';
+import { appointmentReducer } from './store/Appointment/appointment.reducer';
+import { AppointmentEffects } from './store/Appointment/appointment.useeffect';
 
 export const appConfig: ApplicationConfig = {
   providers: [
   provideRouter(routes),
   provideHttpClient(),
-  provideStore({ patient: patientReducer,doctor: doctorReducer }),
-  provideEffects([PatientEffects,DoctorEffects]),
+  provideStore({ patient: patientReducer,doctor: doctorReducer ,appointment:appointmentReducer}),
+  provideEffects([PatientEffects,DoctorEffects,AppointmentEffects]),
   provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
 ]
 

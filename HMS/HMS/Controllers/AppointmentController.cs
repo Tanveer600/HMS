@@ -17,18 +17,17 @@ namespace HMS.Controllers
         _service = service;
     }
     [HttpPost("save")]
-    public ResponseDataModel Save(Appointment model)
+    public ResponseDataModel Save([FromBody] Appointment model)
     {
       return _service.Save(model);
     }
-    [HttpPost("read")]
-    public ResponseDataModel read(Appointment model)
+    [HttpPost("get")]
+    public ResponseDataModel Get([FromBody] Appointment model)
     {
       return _service.Get(model);
     }
     [HttpPost("delete")]
-    public ResponseDataModel Delete
-      (Appointment model)
+    public ResponseDataModel Delete ([FromBody] Appointment model)
     {
       return _service.Remove(model);
     }

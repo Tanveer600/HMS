@@ -11,21 +11,8 @@ export class AppointmentService {
   constructor(private http: HttpClient) {}
 
   // Add or update appointment with optional photo
-  saveAppointment(appointment: Appointment, file?: File): Observable<any> {
-  const formData = new FormData();
-
-  Object.entries(appointment).forEach(([key, value]) => {
-    if (value !== null && value !== undefined && value !== '') {
-      formData.append(key, value.toString());
-    }
-  });
-
-  if (file) {
-    // 🔥 MUST MATCH backend param name
-    formData.append('photo', file);
-  }
-
-  return this.http.post(`${this.api}/save`, formData);
+  saveAppointment(appointment: Appointment): Observable<any> {
+  return this.http.post(`${this.api}/save`, appointment);
 }
 
   // Get appointments

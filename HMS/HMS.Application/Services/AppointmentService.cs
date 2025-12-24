@@ -31,7 +31,7 @@ namespace HMS.Application.Services
 
     public ResponseDataModel Save(Appointment model)
     {
-      if (model.PatientId > 0)
+      if (model.AppointmentId > 0)
         return _repository.Update(model);
       else
         return _repository.Create(model);

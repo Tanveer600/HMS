@@ -56,7 +56,7 @@ export const routes: Routes = [
         children: [
           { path: '', loadComponent: () => import('./components/appointments/appointmentlist/appointmentlist.component').then(m => m.AppointmentlistComponent) },
           { path: 'add', loadComponent: () => import('./components/appointments//add-appointment/add-appointment.component').then(m => m.AddAppointmentComponent) },
-          { path: 'edit', loadComponent: () => import('./components/appointments/edit-appointment/edit-appointment.component').then(m => m.EditAppointmentComponent) }
+          { path: 'edit/:id', loadComponent: () => import('./components/appointments/edit-appointment/edit-appointment.component').then(m => m.EditAppointmentComponent) }
         ]
       }
     ]
